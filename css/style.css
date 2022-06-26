@@ -193,19 +193,9 @@ header nav ul li a{
     margin: 0% 10%;
 }
 
-.mundo__tabla{
-    width: 90%;
-}
-
 .mundo__article h2{
     font-size: 1.5rem;
     padding: 5%;
-}
-
-.mundo__tabla table { 
-    text-align: center;
-    border: none;
-    font-size: 1rem;
 }
 
 .mapaCafe {
@@ -218,24 +208,36 @@ header nav ul li a{
 }
 
 
-@media screen and (min-width: 0px) and (max-width: 768px){
+@media screen and (min-width: 0px) and (max-width: 500px){
     #world{
         margin-top: 40vh;
         padding: 2% 0vw;
     }
     .mundo__article {
         font-size: 1rem;
+        width: 90%;
     }
 
     .mundo__article h2{
         font-size: 1rem;
     }
+}
 
-    .mundo__article table {
-        text-align: center;
+@media screen and (min-width: 501px) and (max-width: 768px){
+    #world{
+        margin-top: 40vh;
+        padding: 2% 0vw;
+    }
+    .mundo__article {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    .mundo__article h2{
         font-size: 1rem;
     }
 }
+
 
 
 /*-----------------------------------------------Productos-----------------------------------------------*/
@@ -414,19 +416,27 @@ header nav ul li a{
 .form__article label{
     font-size: 1.2rem;
 }
+
 .form__article input{
     width: 20vw;
-    background-color: rgba(245, 245, 245, 0.25) ;
     border-radius: 0.5rem;
     margin: 5% 0%;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 2%;
 }
+
+.dato {
+    background-color: rgba(245, 245, 245, 0.25)
+}
+
 .form__article textarea {
     background-color: rgba(245, 245, 245, 0.25) ;
     width: 20vw;
     border-radius: 0.5rem;
     margin: 5% 0%;
-    padding: 0 0 0 5px;
+    padding: 2% 0 0 2%
+}
+.button { 
+    background-color: rgba(0, 139, 139, 0.449);
 }
 .button:hover{
     background-color: darkcyan;
