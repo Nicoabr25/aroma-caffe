@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/fondomain.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ------------------------------------------------- Header -------------------------------------------------*/
+.navbar-nav{
+    font-weight: bold;
+}
+
+/*---------------------------------------------- Main (index) ----------------------------------------------*/
+
+#main section {
+    background-color: rgba(238,238,238,0.8);
+    border-radius: 1rem;
+    margin: 15vh 3vw 5vh 3vw;
+}
+
+
+
+.text_p {
+    text-align: justify;
+}
+
+.seccion_main img{
+    height: 50vh;
+    padding: 2%;
+    border-radius: 2.5rem;
+}
+
+/*---------------------------------------------- Footer ----------------------------------------------*/
+.footer_ img{
+    max-height: 15vh;
+    /* padding-top: 1vh; */
+}
+
+.footer_ ul{
+    list-style: none;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.footer_ i{
+    font-size: 1.1rem;
+    color: whitesmoke;
+}
+
+.footer_ ul li{
+    display: inline-block;
+    margin: 0px 2vw 0px 0px;
+    text-align: center;
+}
+
+.footer_ li{
+    transition-duration: 0.3s;
+}
+
+.footer_ li:hover{
+    transform: scale(3);
+}
+

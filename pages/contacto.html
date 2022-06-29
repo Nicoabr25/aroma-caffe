@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="../css/style2.css">
         <title>Contacto</title>
@@ -12,17 +13,25 @@
 <body id="body__contacto">
     <!-- Logo + nav -->
     <header id="header">
-        <a href="../index.html"><img class="header__logo" src="../img/logonegro.png" alt="Logo de aroma caffe"></a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./mundo.html">Café del Mundo</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./contacto.html" style="color: cadetblue;">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../img/logogris.png" alt="Logo aroma caffe"width="153" height="75"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" href="./mundo.html">Café del Mundo</a>
+                        <a class="nav-link" href="./productos.html">Productos</a>
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        <a class="nav-link active" aria-current="page" href="./contacto.html" style=color:darkcyan>Contacto</a>
+                    </div>
+                </div>
+            </div>
         </nav>
-    </header>
     <!-- Secciones -->
     <main id="contacto">
         <section class="form">
@@ -42,14 +51,20 @@
             </article>
         </section>
     </main>
-    <!-- Inicio del Footer -->
-    <footer id="footer">
-        <img class="footer__imagen" src="../img/logofooter2.png" alt="logo del footer">
-        <ul>
-            <li><a href="./contacto.html" alt="contacto"><i class="bi-telephone"></i></a></li>
-            <li><i class="bi-twitter" alt="Twitter"></i></li>
-            <li><i class="bi-instagram" alt="Instagram""></i></li>
+<!-- Inicio del Footer -->
+<div class="container-fluid p-0">
+    <footer class ="footer_ d-flex flex-wrap justify-content-between align-items-center bg-dark text-bg-danger">
+        <img class="d-flex align-items-center p-1" src="../img/logofooter4.png" alt="logo del footer" width="100" height="75">
+        <ul class="nav align-items-center me-3 list-unstyled">
+            <li class="ms-5 "><a href="./contacto.html" alt="contacto"><i class="bi-telephone"></i></a></li>
+            <li class="ms-5"><i class="bi-twitter" alt="Twitter"></i></li>
+            <li class="ms-5"><i class="bi-instagram" alt="Instagram""></i></li>
         </ul>
     </footer>
+</div>
+
+<!-- Bootstrap JS Script-->
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
+
 </html>
