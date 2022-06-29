@@ -11,7 +11,7 @@
     <title>Café del Mundo</title>
 </head>
 <body>
-    <!-- Logo + nav -->
+    <!-- Header con Bootstrap y algunas modificaciones en style2.css -->
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -33,58 +33,62 @@
             </div>
         </nav>
     </header>
-    <!-- Secciones -->
+    <!------------------------------------- Café del Mundo ------------------------------------->
     <main id="world">
         <section class="mundo">
-            <article class="mundo__article">
-                <h2>Cafés del Mundo</h2>
-                <div class="table-responsive">
-                <table class="table table-dark table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Variedad</th>
-                                <th scope="col">Sabort</th>
-                                <th scope="col">Lugar</th>
-                                <th scope="col">Características</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Arábica</th>
-                                <td>Es más ácido y su sabor es suave y agradable.</td>
-                                <td>Colombia, Honduras, Nicaragua, Perú, Brasil, Africa Central</td>
-                                <td>El café de esta variedad es conocido por tener un sabor suave pero aromático, con notas dulces y florales.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Robusta</th>
-                                <td>Tiene un sabor más fuerte y amargo.</td>
-                                <td>África Occidental y Malasia</td>
-                                <td>El café de esta variedad es conocido por tener un sabor más amargo, es más intenso, fuerte, menos aromático y con mucho cuerpo.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Libérica</th>
-                                <td>Tiene un sabor muy fuerte y toques amaderados, incluso notas a chocolate.</td>
-                                <td>África Occidental y Malasia</td>
-                                <td>Su sabor no es muy apetecido por sus notas ahumadas, sabor amargo y por tener mucho cuerpo y fuerza.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Excelsa</th>
-                                <td>Notas ahumadas y un cuerpo ácido y afrutado.</td>
-                                <td>Indonesia y Filipinas.</td>
-                                <td>Tiene un sabor muy fuerte, amargo y es de mucho cuerpo, por eso no es muy demandado.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <article class="mundo__article container my-5 align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="col-12 text-center m-3 p-4">Cafés del Mundo</h2>
+                    </div>
                 </div>
-                <div class="mapaCafe">
+                        <div class="table-responsive m-4">
+                        <table class="table table-dark table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Variedad</th>
+                                        <th scope="col">Sabort</th>
+                                        <th scope="col">Lugar</th>
+                                        <th scope="col">Características</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Arábica</th>
+                                        <td>Es más ácido y su sabor es suave y agradable.</td>
+                                        <td>Colombia, Honduras, Nicaragua, Perú, Brasil, Africa Central</td>
+                                        <td>El café de esta variedad es conocido por tener un sabor suave pero aromático, con notas dulces y florales.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Robusta</th>
+                                        <td>Tiene un sabor más fuerte y amargo.</td>
+                                        <td>África Occidental y Malasia</td>
+                                        <td>El café de esta variedad es conocido por tener un sabor más amargo, es más intenso, fuerte, menos aromático y con mucho cuerpo.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Libérica</th>
+                                        <td>Tiene un sabor muy fuerte y toques amaderados, incluso notas a chocolate.</td>
+                                        <td>África Occidental y Malasia</td>
+                                        <td>Su sabor no es muy apetecido por sus notas ahumadas, sabor amargo y por tener mucho cuerpo y fuerza.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Excelsa</th>
+                                        <td>Notas ahumadas y un cuerpo ácido y afrutado.</td>
+                                        <td>Indonesia y Filipinas.</td>
+                                        <td>Tiene un sabor muy fuerte, amargo y es de mucho cuerpo, por eso no es muy demandado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                <div class="mapaCafe align-items-center m-4 p-4">
                     <img src="../img/mapadelcafe.jpg" alt="Mapa del Café">
                 </div>
             </article>
         </section>
     </main>
-<!-- Inicio del Footer -->
+<!-------------------------------------Inicio del Footer------------------------------------->
 <div class="container-fluid p-0">
-    <footer class ="footer_ d-flex flex-wrap justify-content-between align-items-center bg-dark text-bg-danger">
+    <footer class ="sticky-bottom footer_ d-flex flex-wrap justify-content-between align-items-center bg-dark text-bg-danger">
         <img class="d-flex align-items-center p-1" src="../img/logofooter4.png" alt="logo del footer" width="100" height="75">
         <ul class="nav align-items-center me-3 list-unstyled">
             <li class="ms-5 "><a href="./contacto.html" alt="contacto"><i class="bi-telephone"></i></a></li>
@@ -93,7 +97,6 @@
         </ul>
     </footer>
 </div>
-
 <!-- Bootstrap JS Script-->
 <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
