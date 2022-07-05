@@ -5,14 +5,14 @@
     }
 
 body{
-    background-image: url("../img/fondomain.jpg");
+    background-image: url("../img/sacos.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto 15vh;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
     "header"
     "main"
@@ -26,180 +26,106 @@ a{
 a:hover {
     color: cadetblue;
 }
+
+
 /* -----------------------------------------------Header-----------------------------------------------*/
-#header {
-    height: auto;
-    width: 100vw;
-    grid-area: header;
-    background-color:#231f20;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center;
-    top:0px;
-    z-index: 1;
-}
 
-.header__logo{
-    max-height: 70px;
-}
-
-header nav{
-    width:fit-content;
+.navbar-nav{
     font-weight: bold;
-    margin: 0px 2vw;
-    ;
-}
-
-header nav ul{
-    list-style: none;
-    justify-content: flex-end;
-    }
-
-header nav ul li{
-    display: inline-block;
-    padding: 0% 1vw;
-    }
-
-header nav ul li a{
-    color: whitesmoke;
-    font-size: 1rem;
-    
-}
-
-@media screen and (min-width: 0px) and (max-width: 768px){
-    #header {
-        width: 100%;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
-        align-items: center;
-        top:0px;
-        z-index: 1;
-    }
-    
-    .header__logo{
-        max-height: 10vh;
-    }
-
-    header nav{
-        width:auto;
-        font-weight: bold;
-        ;
-    }
-    
-    header nav ul{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        }
-
-    header nav ul li{
-        padding: 5% 0%;
-    }
-
-    header nav ul li a{
-        color: whitesmoke;
-        font-size: 0.8rem;
-        
-    }
 }
 
 /*-----------------------------------------------Main (index)-----------------------------------------------*/
 #main{
     grid-area: main;
-    margin: 15vh 3vw 5vh 3vw;
+    margin: 0vh 0vw 0vh 0vw;
 }
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/4.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: antiquewhite;
+}
+
+.banner__img{
+    width: 50vw;
+}
+
+.banner img{
+    width: 40vw;
+    border-radius: 1rem;
+}
+
+.banner__text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:50vw;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.banner__text h2{
+    font-size: 3rem;
+}
+
 #main section {
     background-color: rgba(238,238,238,0.5);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-}
-
-.articulo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
 
-.articulo img {
-    width: 15vw;
-    margin: 3vh 3vw;
-    border-radius: 1rem;
-    transition-duration: 1.5s;
-}
-
-.articulo img:hover{
-    transform: scale(1.1, 1.1);
-}
-
-.articulo p {
-    display: inline-block;
-    text-align: justify;
-    margin: 3vh 3vw;
-}
-
-@media screen and (min-width: 0px) and (max-width: 768px){
-    #main{
-        margin-top: 40vh;
-        padding: 2%;
-    }
-
-    .articulo {
+@media screen and (min-width: 0px) and (max-width: 600px){
+    .banner{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-evenly;
     }
 
-    .articulo img {
-        width: 50vw;
-        margin: 3vh 3vw;
+    .banner img{
+        width: 60vw;
         border-radius: 1rem;
     }
 
-    .articulo p {
-        display: inline-block;
-        text-align: justify;
-        margin: 3vh 3vw;
+    .banner__text {
+        font-size: 1rem;
+    }
+    
+    .banner__text h2{
+        font-size: 1.2rem;
+    }
+
+    #carouselExampleCaptions{
+        height: 300px;
+    }
+    .carousel-inner img{
+        height: 300px;
     }
 }
 
-/*-----------------------------------------------Café del Mundo-----------------------------------------------*/
-#world{
-    grid-area: main;
-    margin-top: 15vh;
+/*-----------------------------------------------Carrousel -----------------------------------------------*/
+#carrousel{
+    max-height: 700px;
 }
 
-/* .mundo{
-    margin: 20% 3vw;
-} */
-
+/*-----------------------------------------------Café del Mundo-----------------------------------------------*/
 .mundo__article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     background-color: rgba(238,238,238,0.5);
     border-radius: 1rem;
-    margin: 0% 10%;
-}
-
-.mundo__article h2{
-    font-size: 1.5rem;
-    padding: 5vh;
-}
-
-.mapaCafe {
-    margin: 2% 2%;
 }
 
 .mapaCafe img{
@@ -207,38 +133,9 @@ header nav ul li a{
     max-height: 100%;
 }
 
-/* 
-@media screen and (min-width: 0px) and (max-width: 500px){
-    #world{
-        margin-top: 40vh;
-        padding: 2% 0vw;
-    }
-    .mundo__article {
-        font-size: 1rem;
-        width: 90%;
-    }
-
-    .mundo__article h2{
-        font-size: 1rem;
-    }
-} */
-
-@media screen and (min-width: 0px) and (max-width: 768px){
-    #world{
-        margin-top: 40vh;
-        padding: 2% 0vw;
-    }
-    .mundo__article {
-        font-size: 1rem;
-        width: 80%;
-    }
-
-    .mundo__article h2{
-        font-size: 1rem;
-    }
+.table{
+    overflow-x: scroll;
 }
-
-
 
 /*-----------------------------------------------Productos-----------------------------------------------*/
 #body_productos{
@@ -248,29 +145,30 @@ header nav ul li a{
 
 #productos{
     grid-area: main;
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 .producto__article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* min-height: 60vh;
-    min-width: none; */
     background-color: rgba(238, 238, 238, 0.5);
     border-radius: 1rem;
     margin: 5vh 5vw;
 }
 
-.producto__article h3{
+.producto__article h2,h3{
     font-size: 1.5rem;
+    font-weight: 700;
     position: relative;
     text-align: center;
-    margin: 20px 0px;
+    margin: 10px 0px;
     padding: 10px;
 }
 
-.producto__article p{
+.producto__p{
+    font-weight: 500;
+    font-size: 1.1rem;
     position: relative;
     text-align: justify;
     margin: 2% 5%;
@@ -294,7 +192,6 @@ header nav ul li a{
 
 @media screen and (min-width: 0px) and (max-width: 768px){
     .producto{
-        margin-top: 40vh;
         padding: 1% 0vw ;
     }
     .producto__article h3{
@@ -338,8 +235,10 @@ header nav ul li a{
 
 .nosotros__article p{
     margin: 2% 2%;
-    padding: 2% 2% 2% 2%;
+    padding: 2% 10% 2% 10%;
     text-align: justify;
+    font-weight: 500;
+    line-height: 2;
 }
 
 .nosotros__video{
@@ -359,9 +258,6 @@ header nav ul li a{
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px){
-    #nosotros{
-        margin-top: 40vh;
-    }
 
     .nosotros__article{
         padding: 10% 0%;
@@ -384,7 +280,6 @@ header nav ul li a{
 
 #contacto{
     grid-area: main;
-    margin-top: 15vh;
 }
 
 .form{
@@ -443,9 +338,6 @@ header nav ul li a{
     color: white;
 }
 @media screen and (min-width: 0px) and (max-width: 768px){
-    #contacto{
-        margin-top: 40vh;
-    }
     .form__article h3{
         font-size: 1.5rem;
         text-align: center;
@@ -461,13 +353,10 @@ header nav ul li a{
         width:70%
     }
 }
-
-
-
 /*-----------------------------------------------Footer-----------------------------------------------*/
 #footer{
     grid-area: footer;
-    background-color: #231F20;
+    background-color: #212529;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -488,6 +377,12 @@ header nav ul li a{
     display: inline-block;
     margin: 0px 2vw 0px 0px;
     text-align: center;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
+#footer ul li:hover{
+    transform: scale(1.2);
 }
 
 #footer i{
