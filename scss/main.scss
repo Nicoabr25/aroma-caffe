@@ -1,0 +1,22 @@
+/*-------------------------------------------------------------------Extras--------------------------------------------------------------------------*/
+@import "./general/reset";
+
+@import "./general/variables";
+
+@import "./general/utilidades";
+
+@import "./general/breakpoints";
+
+/*-------------------------------------------------------------------Secciones--------------------------------------------------------------------------*/
+@import "./sections/body";
+@import "./sections/header";
+@import "./sections/index";
+@import "./sections/mundo";
+@import "./sections/nosotros";
+@import "./sections/productos";
+@import "./sections/contacto";
+@import "./sections/footer";
+
+/*-------------------------------------------------------------------componentes--------------------------------------------------------------------------*/
+@import "./componentes/carrousel";
+@import "./componentes/tarj-productos";

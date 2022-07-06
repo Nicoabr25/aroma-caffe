@@ -1,0 +1,69 @@
+/*------------ Utilidades ------------*/
+
+.color-dark{
+    color: $clr-dark;
+}
+.color-grey{
+    color: $clr-grey;
+}
+.color-mustard{
+    color: $clr-mustard;
+}
+.color-yellow{
+    color:$clr-yellow;
+}
+.color-orange{
+    color: $clr-orange;
+}
+.color-green{
+    color: $clr-green;
+}
+.color-lgreen{
+    color: $clr-ligthgreen;
+}
+.color-blue{
+    color: $clr-blue;
+}
+.color-nblue{
+    color: $clr-navyblue;
+}
+.color-wsmoke{
+    color: $clr-whitesmoke;
+}
+
+
+.bradius075{
+    border-radius: $borderRadius075;
+} 
+.bradius1{
+    border-radius: $borderRadius1;
+} 
+.bradius2{
+    border-radius: $borderRadius2 ;
+}
+
+
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin maingrid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+@mixin title {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'EB Garamond', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');

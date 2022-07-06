@@ -1,0 +1,16 @@
+/*-------General------*/
+body{
+    background-image: url("../img/sacos.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include maingrid;
+}
+a{
+    text-decoration: none;
+    color: $clr-whitesmoke;
+}
+a:hover {
+    color: $clr-ligthgreen;
+}

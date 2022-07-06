@@ -1,0 +1,70 @@
+/*-------Productos------*/
+#body_productos{
+    background-image: url(../img/fondoporductos.jpg);
+    background-size: cover;
+}
+
+#productos{
+    grid-area: main;
+    margin-top: 5vh;
+}
+
+.producto__article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $clr-article;
+    border-radius: $borderRadius1;
+    margin: 5vh 5vw;
+
+    & h2{
+        @include title;
+        position: relative;
+        text-align: center;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+
+    & h3{
+        font-size: 1.5rem;
+        font-weight: 700;
+        position: relative;
+        text-align: center;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+
+    & div{
+        height: 50%;
+        margin: 2%;
+    }
+
+    & img{
+        width: 100%;
+        border-radius: 1rem;
+        transition: all 2s;
+
+        &:hover{
+            transform: scale(1.2, 1.2);
+        }
+    }
+}
+
+.producto__p{
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    text-align: justify;
+    margin: 2% 5%;
+    line-height: 2;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 768px){
+    .producto{
+        padding: 1% 0vw ;
+    }
+    .producto__article h3{
+        font-size: 1rem;
+    }
+}

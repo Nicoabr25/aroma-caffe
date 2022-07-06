@@ -1,0 +1,33 @@
+/*-------Footer------*/
+#footer{
+    grid-area: footer;
+    background-color: $clr-nav_footer;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+
+    & .footer__imagen{
+        max-height: 15vh;
+    }
+    & ul{
+        list-style: none;
+        color: $clr-whitesmoke;
+        text-align: center;
+        & li{
+            display: inline-block;
+            margin: 0px 2vw 0px 0px;
+            text-align: center;
+            transition-duration: 300ms;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    & i{
+        font-size: 1.5rem;
+        color: $clr-whitesmoke;
+    }
+}
