@@ -147,6 +147,32 @@ a:hover {
   font-weight: bold;
 }
 
+@media screen and (min-width: 0px) and (max-width: 250px) {
+  .contanier-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-brand img {
+    aspect-ratio: 153/75;
+    max-width: 76px;
+    max-height: 37px;
+  }
+}
+@media screen and (min-width: 251px) {
+  .contanier-fluid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-brand img {
+    aspect-ratio: 153/75;
+    max-width: 153px;
+    max-height: 75px;
+  }
+}
 /*-------Main------*/
 #main {
   grid-area: main;
@@ -222,9 +248,15 @@ a:hover {
   }
 }
 /*-------Café del Mundo------*/
+#world {
+  grid-area: main;
+  margin-top: 15vh;
+}
+
 .mundo__article {
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
+  margin: 2% 10%;
 }
 .mundo__article h2 {
   font-size: 2rem;
@@ -238,7 +270,8 @@ a:hover {
 }
 
 .table {
-  overflow-x: scroll;
+  overflow-x: auto;
+  padding: 5%;
 }
 
 /*-------Nosotros------*/
@@ -296,7 +329,23 @@ a:hover {
   height: 100%;
 }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 350px) {
+  .nosotros__article {
+    padding: 10% 0%;
+  }
+  .nosotros__article h3 {
+    font-size: 1rem;
+  }
+  .nosotros__article h4 {
+    font-size: 0.8rem;
+  }
+  .nosotros__article p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 351px) and (max-width: 768px) {
   .nosotros__article {
     padding: 10% 0%;
   }
@@ -305,6 +354,11 @@ a:hover {
   }
   .nosotros__article h4 {
     font-size: 1rem;
+  }
+  .nosotros__article p {
+    font-size: 0.8rem;
+    line-height: 2;
+    font-weight: 400;
   }
 }
 /*-------Productos------*/
@@ -315,16 +369,17 @@ a:hover {
 
 #productos {
   grid-area: main;
-  margin-top: 5vh;
+  margin-top: 15vh;
 }
 
 .producto__article {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
-  margin: 5vh 5vw;
+  margin: 2% 10%;
 }
 .producto__article h2 {
   font-size: 2rem;
@@ -344,7 +399,7 @@ a:hover {
   padding: 10px;
 }
 .producto__article div {
-  height: 50%;
+  height: auto;
   margin: 2%;
 }
 .producto__article img {
@@ -365,13 +420,17 @@ a:hover {
   line-height: 2;
 }
 
+.card {
+  width: 18rem;
+}
+
 .card-text {
   font-size: 0.8rem;
   margin-bottom: 5%;
   text-align: justify;
 }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 430px) and (max-width: 768px) {
   .producto {
     padding: 1% 0vw;
   }
@@ -382,6 +441,24 @@ a:hover {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 0px) and (max-width: 429px) {
+  .producto {
+    padding: 1% 0vw;
+  }
+  .producto__article h2 {
+    font-size: 1.2rem;
+  }
+  .producto__article h3 {
+    font-size: 1rem;
+  }
+  .card {
+    width: 12rem;
+    margin: 4px;
+  }
+  .container {
+    overflow-x: scroll;
+  }
+}
 /*-------Contacto------*/
 #body__contacto {
   background-image: url(../img/contactofondo.jpg);
@@ -389,10 +466,11 @@ a:hover {
 
 #contacto {
   grid-area: main;
+  margin-top: 15vh;
 }
 
 .form {
-  margin: 10vh 10vw;
+  margin: 2% 10%;
 }
 
 .form__article {
@@ -465,10 +543,6 @@ a:hover {
 #footer {
   grid-area: footer;
   background-color: #212529;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 #footer .footer__imagen {
   max-height: 15vh;
@@ -493,6 +567,28 @@ a:hover {
   color: #f5f5f5;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 350px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer img {
+    aspect-ratio: 134/113;
+    max-width: 76px;
+  }
+  .footer i {
+    font-size: 0.8rem;
+  }
+}
 /*-------------------------------------------------------------------componentes--------------------------------------------------------------------------*/
 /*-------Carrousel------*/
 #carrousel {

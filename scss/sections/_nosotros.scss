@@ -56,7 +56,29 @@
 }
 
 
-@media screen and (min-width: 0px) and (max-width: 768px){
+@media screen and (min-width: 0px) and (max-width: 350px){
+
+    .nosotros__article{
+        padding: 10% 0%;
+    }
+
+    .nosotros__article h3{
+        font-size: 1rem;
+    }
+
+    .nosotros__article h4{
+        font-size: 0.8rem;
+    }
+
+    .nosotros__article p{
+        font-size: 0.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+}
+
+@media screen and (min-width: 351px) and (max-width: 768px){
 
     .nosotros__article{
         padding: 10% 0%;
@@ -68,6 +90,11 @@
 
     .nosotros__article h4{
         font-size: 1rem;
+    }
+    .nosotros__article p{
+        font-size: 0.8rem;
+        line-height: 2;
+        font-weight: 400;
     }
 
 }

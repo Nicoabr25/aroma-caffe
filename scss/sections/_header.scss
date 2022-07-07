@@ -2,3 +2,33 @@
 .navbar-nav{
     font-weight: bold;
 }
+
+@media screen and (min-width: 0px) and (max-width: 250px){
+    .contanier-fluid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar-brand img{
+        aspect-ratio: 153/75;
+        max-width: 76px;
+        max-height: 37px;
+    }
+}
+
+@media screen and (min-width: 251px){
+    .contanier-fluid{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .navbar-brand img{
+        aspect-ratio: 153/75;
+        max-width: 153px;
+        max-height: 75px;
+    }
+
+
+}

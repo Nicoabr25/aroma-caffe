@@ -6,16 +6,18 @@
 
 #productos{
     grid-area: main;
-    margin-top: 5vh;
+    margin-top: 15vh;
 }
 
 .producto__article{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: $clr-article;
     border-radius: $borderRadius1;
-    margin: 5vh 5vw;
+    margin: 2% 10%;
+
 
     & h2{
         @include title;
@@ -35,7 +37,7 @@
     }
 
     & div{
-        height: 50%;
+        height: auto;
         margin: 2%;
     }
 
@@ -58,13 +60,17 @@
     margin: 2% 5%;
     line-height: 2;
 }
+
+.card{
+    width: 18rem;
+}
 .card-text {
     font-size: 0.8rem;
     margin-bottom: 5%;
     text-align: justify;
 }
 
-@media screen and (min-width: 0px) and (max-width: 768px){
+@media screen and (min-width: 430px) and (max-width: 768px){
     .producto{
         padding: 1% 0vw ;
     }
@@ -75,4 +81,25 @@
         font-size: 1rem;
     }
 
+}
+
+@media screen and (min-width: 0px) and (max-width: 429px){
+    .producto{
+        padding: 1% 0vw ;
+    }
+    .producto__article h2{
+        font-size: 1.2rem;
+    }
+    .producto__article h3{
+        font-size: 1rem;
+    }
+
+    .card{
+        width: 12rem;
+        margin: 4px;
+    }
+    
+    .container{
+        overflow-x: scroll;
+    }
 }
