@@ -9,14 +9,9 @@
 }
 
 .mundo__article {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
     background-color: $clr-article;
     border-radius: $borderRadius1;
     margin: 10% 10%;
-
 
     & h2{
         @include title;

@@ -18,7 +18,6 @@
     border-radius: $borderRadius1;
     margin: 10% 10%;
 
-
     & h2{
         @include title;
         position: relative;
@@ -80,7 +79,6 @@
     .producto__article h3{
         font-size: 1rem;
     }
-
 }
 
 @media screen and (min-width: 0px) and (max-width: 429px){
@@ -93,7 +91,6 @@
     .producto__article h3{
         font-size: 1rem;
     }
-
     .card{
         width: 12rem;
         margin: 4px;
