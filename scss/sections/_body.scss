@@ -1,10 +1,10 @@
 /*-------General------*/
 body{
-    background-image: url("../img/sacos.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: $clr-nav_footer;
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     @include maingrid;
 }
 a{

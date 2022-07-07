@@ -122,11 +122,7 @@ select {
 /*-------------------------------------------------------------------Secciones--------------------------------------------------------------------------*/
 /*-------General------*/
 body {
-  background-image: url("../img/sacos.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #212529;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto;
@@ -176,7 +172,6 @@ a:hover {
 /*-------Main------*/
 #main {
   grid-area: main;
-  margin: 0vh 0vw 0vh 0vw;
 }
 
 .banner {
@@ -250,13 +245,17 @@ a:hover {
 /*-------Café del Mundo------*/
 #world {
   grid-area: main;
-  margin-top: 15vh;
+  background-image: url("../img/sacos.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .mundo__article {
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
-  margin: 2% 10%;
+  margin: 10% 10%;
 }
 .mundo__article h2 {
   font-size: 2rem;
@@ -275,14 +274,14 @@ a:hover {
 }
 
 /*-------Nosotros------*/
-#body__nosotros {
+#nosotros {
   background-image: url(../img/fondocafe.jpg);
   background-size: cover;
-}
-
-#nosotros {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: main;
-  margin-top: 15vh;
 }
 
 .nosotros__article {
@@ -292,7 +291,7 @@ a:hover {
   align-items: center;
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
-  margin: 2% 10%;
+  margin: 10% 10%;
 }
 .nosotros__article h3 {
   padding: 2%;
@@ -362,14 +361,14 @@ a:hover {
   }
 }
 /*-------Productos------*/
-#body_productos {
-  background-image: url(../img/fondoporductos.jpg);
-  background-size: cover;
-}
-
 #productos {
   grid-area: main;
-  margin-top: 15vh;
+  background-image: url(../img/fondoporductos.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .producto__article {
@@ -379,7 +378,7 @@ a:hover {
   align-items: center;
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
-  margin: 2% 10%;
+  margin: 10% 10%;
 }
 .producto__article h2 {
   font-size: 2rem;
@@ -460,17 +459,18 @@ a:hover {
   }
 }
 /*-------Contacto------*/
-#body__contacto {
-  background-image: url(../img/contactofondo.jpg);
-}
-
 #contacto {
   grid-area: main;
-  margin-top: 15vh;
+  background-image: url(../img/contactofondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .form {
-  margin: 2% 10%;
+  margin: 10% 10%;
 }
 
 .form__article {
