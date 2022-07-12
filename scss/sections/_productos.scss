@@ -2,11 +2,7 @@
 #productos{
     grid-area: main;
     background-image: url(../img/fondoporductos.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include background_effect;
 }
 
 .producto__article{
@@ -18,7 +14,7 @@
     border-radius: $borderRadius1;
     margin: 10% 10%;
 
-    & h2{
+    & h1{
         @include title;
         position: relative;
         text-align: center;
@@ -26,7 +22,7 @@
         padding: 10px;
     }
 
-    & h3{
+    & h2{
         font-size: 1.5rem;
         font-weight: 700;
         position: relative;
@@ -69,26 +65,14 @@
     text-align: justify;
 }
 
-@media screen and (min-width: 430px) and (max-width: 768px){
-    .producto{
-        padding: 1% 0vw ;
-    }
-    .producto__article h2{
-        font-size: 1.2rem;
-    }
-    .producto__article h3{
-        font-size: 1rem;
-    }
-}
-
 @media screen and (min-width: 0px) and (max-width: 429px){
     .producto{
         padding: 1% 0vw ;
     }
-    .producto__article h2{
+    .producto__article h1{
         font-size: 1.2rem;
     }
-    .producto__article h3{
+    .producto__article h2{
         font-size: 1rem;
     }
     .card{
@@ -98,5 +82,17 @@
     
     .container{
         overflow-x: scroll;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 768px){
+    .producto{
+        padding: 1% 0vw ;
+    }
+    .producto__article h1{
+        font-size: 1.5rem;
+    }
+    .producto__article h2{
+        font-size: 1rem;
     }
 }

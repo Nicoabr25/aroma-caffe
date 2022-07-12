@@ -1,11 +1,7 @@
 /*-------Nosotros------*/
 #nosotros{
     background-image: url(../img/fondocafe.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include background_effect;
     grid-area: main;
 }
 
@@ -18,13 +14,13 @@
     border-radius: $borderRadius1;
     margin: 10% 10%;
 
-    & h3{
+    & h1{
         padding: 2%;
         text-align: center;
         @include title;
     }
 
-    & h4{
+    & h2{
         padding: 2%;
         text-align: center;
         font-size: 1.2rem;
@@ -54,18 +50,18 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 350px){
+@media screen and (min-width: 0px) and (max-width: 429px){
 
     .nosotros__article{
         padding: 10% 0%;
     }
 
-    .nosotros__article h3{
-        font-size: 1rem;
+    .nosotros__article h1{
+        font-size: 1.2rem;
     }
 
-    .nosotros__article h4{
-        font-size: 0.8rem;
+    .nosotros__article h2{
+        font-size: 1rem;
     }
 
     .nosotros__article p{
@@ -75,17 +71,17 @@
     }
 }
 
-@media screen and (min-width: 351px) and (max-width: 768px){
+@media screen and (min-width: 430px) and (max-width: 768px){
 
     .nosotros__article{
         padding: 10% 0%;
     }
 
-    .nosotros__article h3{
-        font-size: 1.2rem;
+    .nosotros__article h1{
+        font-size: 1.5rem;
     }
 
-    .nosotros__article h4{
+    .nosotros__article h2{
         font-size: 1rem;
     }
     .nosotros__article p{

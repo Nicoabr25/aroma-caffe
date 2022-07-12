@@ -137,6 +137,34 @@ a:hover {
   color: #3CA6A6;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.75rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
 /*-------Header------*/
 .navbar-nav {
   font-weight: bold;
@@ -204,8 +232,9 @@ a:hover {
   text-align: center;
   font-size: 1.5rem;
 }
-.banner__text h2 {
-  font-size: 3rem;
+.banner__text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 #main section {
@@ -228,17 +257,11 @@ a:hover {
     width: 60vw;
     border-radius: 1rem;
   }
-  .banner__text {
-    font-size: 1rem;
-  }
-  .banner__text h2 {
+  .banner__text h1 {
     font-size: 1.2rem;
   }
-  #carouselExampleCaptions {
-    height: 300px;
-  }
-  .carousel-inner img {
-    height: 300px;
+  .banner__text p {
+    font-size: 1rem;
   }
 }
 /*-------Café del Mundo------*/
@@ -256,8 +279,7 @@ a:hover {
   border-radius: 1rem;
   margin: 10% 10%;
 }
-.mundo__article h2 {
-  font-size: 2rem;
+.mundo__article h1 {
   font-weight: 700;
   font-family: "EB Garamond", serif;
 }
@@ -275,7 +297,6 @@ a:hover {
 /*-------Nosotros------*/
 #nosotros {
   background-image: url(../img/fondocafe.jpg);
-  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -292,14 +313,13 @@ a:hover {
   border-radius: 1rem;
   margin: 10% 10%;
 }
-.nosotros__article h3 {
+.nosotros__article h1 {
   padding: 2%;
   text-align: center;
-  font-size: 2rem;
   font-weight: 700;
   font-family: "EB Garamond", serif;
 }
-.nosotros__article h4 {
+.nosotros__article h2 {
   padding: 2%;
   text-align: center;
   font-size: 1.2rem;
@@ -327,15 +347,15 @@ a:hover {
   height: 100%;
 }
 
-@media screen and (min-width: 0px) and (max-width: 350px) {
+@media screen and (min-width: 0px) and (max-width: 429px) {
   .nosotros__article {
     padding: 10% 0%;
   }
-  .nosotros__article h3 {
-    font-size: 1rem;
+  .nosotros__article h1 {
+    font-size: 1.2rem;
   }
-  .nosotros__article h4 {
-    font-size: 0.8rem;
+  .nosotros__article h2 {
+    font-size: 1rem;
   }
   .nosotros__article p {
     font-size: 0.8rem;
@@ -343,14 +363,14 @@ a:hover {
     font-weight: 400;
   }
 }
-@media screen and (min-width: 351px) and (max-width: 768px) {
+@media screen and (min-width: 430px) and (max-width: 768px) {
   .nosotros__article {
     padding: 10% 0%;
   }
-  .nosotros__article h3 {
-    font-size: 1.2rem;
+  .nosotros__article h1 {
+    font-size: 1.5rem;
   }
-  .nosotros__article h4 {
+  .nosotros__article h2 {
     font-size: 1rem;
   }
   .nosotros__article p {
@@ -363,7 +383,6 @@ a:hover {
 #productos {
   grid-area: main;
   background-image: url(../img/fondoporductos.jpg);
-  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -379,8 +398,7 @@ a:hover {
   border-radius: 1rem;
   margin: 10% 10%;
 }
-.producto__article h2 {
-  font-size: 2rem;
+.producto__article h1 {
   font-weight: 700;
   font-family: "EB Garamond", serif;
   position: relative;
@@ -388,7 +406,7 @@ a:hover {
   margin: 10px 0px;
   padding: 10px;
 }
-.producto__article h3 {
+.producto__article h2 {
   font-size: 1.5rem;
   font-weight: 700;
   position: relative;
@@ -428,25 +446,14 @@ a:hover {
   text-align: justify;
 }
 
-@media screen and (min-width: 430px) and (max-width: 768px) {
-  .producto {
-    padding: 1% 0vw;
-  }
-  .producto__article h2 {
-    font-size: 1.2rem;
-  }
-  .producto__article h3 {
-    font-size: 1rem;
-  }
-}
 @media screen and (min-width: 0px) and (max-width: 429px) {
   .producto {
     padding: 1% 0vw;
   }
-  .producto__article h2 {
+  .producto__article h1 {
     font-size: 1.2rem;
   }
-  .producto__article h3 {
+  .producto__article h2 {
     font-size: 1rem;
   }
   .card {
@@ -457,11 +464,21 @@ a:hover {
     overflow-x: scroll;
   }
 }
+@media screen and (min-width: 430px) and (max-width: 768px) {
+  .producto {
+    padding: 1% 0vw;
+  }
+  .producto__article h1 {
+    font-size: 1.5rem;
+  }
+  .producto__article h2 {
+    font-size: 1rem;
+  }
+}
 /*-------Contacto------*/
 #contacto {
   grid-area: main;
   background-image: url(../img/contactofondo.jpg);
-  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -480,8 +497,7 @@ a:hover {
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
 }
-.form__article h3 {
-  font-size: 2rem;
+.form__article h1 {
   font-weight: 700;
   font-family: "EB Garamond", serif;
   padding: 10px;
@@ -522,8 +538,24 @@ a:hover {
   color: white;
 }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .form__article h3 {
+@media screen and (min-width: 0px) and (max-width: 429px) {
+  .form__article h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .form__article label {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .form__article input {
+    width: 70%;
+  }
+  .form__article textarea {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 768px) {
+  .form__article h1 {
     font-size: 1.5rem;
     text-align: center;
   }
@@ -592,6 +624,21 @@ a:hover {
 /*-------Carrousel------*/
 #carrousel {
   max-height: 700px;
+}
+
+.carousel-inner p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #carouselExampleCaptions {
+    height: 300px;
+  }
+  .carousel-inner img {
+    height: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

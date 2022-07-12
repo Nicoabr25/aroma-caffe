@@ -2,3 +2,19 @@
 #carrousel{
     max-height: 700px;
 }
+
+.carousel-inner p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px){
+    
+    #carouselExampleCaptions{
+        height: 300px;
+    }
+    .carousel-inner img{
+        height: 300px;
+    }
+}

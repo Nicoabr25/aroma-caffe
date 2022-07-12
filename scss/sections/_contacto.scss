@@ -2,11 +2,7 @@
 #contacto{
     grid-area: main;
     background-image: url(../img/contactofondo.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include background_effect;
 }
 
 .form{
@@ -21,7 +17,7 @@
     background-color: $clr-article;
     border-radius: $borderRadius1;
 
-    & h3{
+    & h1{
         @include title;
         padding: 10px;
     }
@@ -68,9 +64,28 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 768px){
+@media screen and (min-width: 0px) and (max-width: 429px){
     .form__article{
-        & h3{
+        & h1{
+        font-size: 1.2rem;
+        text-align: center;
+        }
+        & label{
+        font-size: 0.8rem;
+        text-align: center;
+        }
+        & input{
+        width: 70%;
+        }
+        & textarea{
+        width:70%
+        }
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 768px){
+    .form__article{
+        & h1{
         font-size: 1.5rem;
         text-align: center;
         }
@@ -86,3 +101,4 @@
         }
     }
 }
+

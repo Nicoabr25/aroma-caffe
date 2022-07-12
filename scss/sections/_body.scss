@@ -3,6 +3,7 @@ body{
     background-color: $clr-nav_footer;
     @include maingrid;
 }
+
 a{
     text-decoration: none;
     color: $clr-whitesmoke;
@@ -11,3 +12,24 @@ a{
         color: $clr-ligthgreen;
     }
 }
+
+$texto:(
+    h1: 2rem,
+    h2: 1.5rem,
+    h3: 1rem,
+    h4: 1rem,
+    h5: 0.75rem,
+    h6: 0.75rem,
+);
+
+@each $h, $tamanio in $texto {
+    #{$h}{
+        font-size: $tamanio;
+    }
+    
+}
+
+p {
+    font-size: 1.3rem;
+}
+
