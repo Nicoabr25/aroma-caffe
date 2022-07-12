@@ -1,17 +1,13 @@
 /*-------General------*/
 body{
     background-color: $clr-nav_footer;
-    // background-attachment: fixed;
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
     @include maingrid;
 }
 a{
     text-decoration: none;
     color: $clr-whitesmoke;
+    
+    &:hover {
+        color: $clr-ligthgreen;
+    }
 }
-a:hover {
-    color: $clr-ligthgreen;
-}
-
