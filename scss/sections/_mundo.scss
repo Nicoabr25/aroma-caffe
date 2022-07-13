@@ -1,7 +1,7 @@
 /*-------Café del Mundo------*/
 #world{
     grid-area: main;
-    background-image: url("../img/sacos.jpg");
+    background-image: map-get($wallpaper , mundo);
     @include background_effect;
 }
 

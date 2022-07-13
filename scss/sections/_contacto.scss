@@ -1,7 +1,7 @@
 /*-------Contacto------*/
 #contacto{
     grid-area: main;
-    background-image: url(../img/contactofondo.jpg);
+    background-image: map-get($wallpaper , contacto);
     @include background_effect;
 }
 
@@ -10,10 +10,7 @@
 }
 
 .form__article{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flexColumBetewen;
     background-color: $clr-article;
     border-radius: $borderRadius1;
 
@@ -43,9 +40,7 @@
 
     & textarea {
         background-color: rgba(245, 245, 245, 0.25) ;
-        width: 20vw;
-        border-radius: 0.5rem;
-        margin: 5% 0%;
+        @extend input;
         padding: 2% 0 0 2%
     }
 }

@@ -38,10 +38,7 @@
 
 @media screen and (min-width: 0px) and (max-width: 350px){
     .footer{
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
-        align-items: center;
+        @include flexColumBetewen;
         & img{
             aspect-ratio: 134/113;
             max-width: 76px;

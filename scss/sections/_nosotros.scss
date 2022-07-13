@@ -1,6 +1,6 @@
 /*-------Nosotros------*/
 #nosotros{
-    background-image: url(../img/fondocafe.jpg);
+    background-image: map-get($wallpaper, nosotros);
     @include background_effect;
     grid-area: main;
 }
