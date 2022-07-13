@@ -625,6 +625,10 @@ p {
   line-height: 1.5;
 }
 
+.carousel-item img {
+  object-fit: cover;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   #carouselExampleCaptions {
     height: 300px;
