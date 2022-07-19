@@ -69,14 +69,11 @@
 .button { 
     background-color: $clr-yellow;
 
-
     &:hover{
         background-color: $clr-ligthgreen;
         color: white;
     }
 }
-
-
 
 @media screen and (min-width: 0px) and (max-width: 429px){
     .form{
