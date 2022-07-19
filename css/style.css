@@ -121,6 +121,10 @@ select {
 
 /*-------------------------------------------------------------------Secciones--------------------------------------------------------------------------*/
 /*-------General------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #212529;
   display: grid;
@@ -222,15 +226,46 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("../img/newsletter.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% 90%;
   flex-direction: column;
   flex-wrap: wrap;
   width: 50vw;
+  height: 100vh;
   text-align: center;
   font-size: 1.5rem;
 }
 .banner__text h1 {
-  font-size: 3.5rem;
+  color: #3CA6A6;
+  font-size: 2rem;
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+.banner__text h2 {
+  color: #3CA6A6;
+  font-size: 1.5rem;
+  width: 55%;
+}
+.banner__text label {
+  color: #3CA6A6;
+  font-size: 1.2rem;
+  margin: 2% 0% 2% 0%;
+  width: 50%;
+}
+.banner__text form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner__text form input, .banner__text form .form__article textarea, .form__article .banner__text form textarea {
+  font-size: 1rem;
+  width: 20vw;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 2% 0%;
+  padding: 5px;
 }
 
 #main section {
@@ -242,22 +277,63 @@ p {
   align-items: center;
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .banner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    height: auto;
+    padding: 2% 0%;
+  }
+  .banner__img {
+    width: 100%;
   }
   .banner img {
     width: 60vw;
     border-radius: 1rem;
+    margin-left: 20%;
+  }
+  .banner__text {
+    background-image: none;
+    background-color: rgba(238, 238, 238, 0.4);
+    color: #f5f5f5;
+    width: 60vw;
+    height: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 5% 5%;
+    border-radius: 1rem;
   }
   .banner__text h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: #f5f5f5;
+    padding: 2% 0%;
   }
-  .banner__text p {
+  .banner__text h2 {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    padding: 2% 0%;
+    width: 50vw;
+  }
+  .banner__text label {
     font-size: 1rem;
+    color: #f5f5f5;
+    padding: 2% 0%;
+    width: 50vw;
+  }
+  .banner__text form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner__text form input, .banner__text form .form__article textarea, .form__article .banner__text form textarea {
+    font-size: 1rem;
+    width: 50vw;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 2% 0%;
+    padding: 5px;
   }
 }
 /*-------Café del Mundo------*/
@@ -288,6 +364,19 @@ p {
 .table {
   overflow-x: auto;
   padding: 5%;
+}
+
+.acordeon {
+  margin: 5vh 5vw;
+  padding-bottom: 5vh;
+}
+
+.accordion-item {
+  color: aliceblue;
+}
+
+.accordion-item h2 {
+  color: aquamarine;
 }
 
 /*-------Nosotros------*/
@@ -483,6 +572,22 @@ p {
 
 .form {
   margin: 10% 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(238, 238, 238, 0.85);
+  border-radius: 1rem;
+}
+
+.mapa {
+  margin: 5% 5%;
+  padding: 3% 3%;
+}
+.mapa iframe {
+  width: 35vw;
+  height: 70vh;
+  border-radius: 1rem;
 }
 
 .form__article {
@@ -492,6 +597,7 @@ p {
   align-items: center;
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
+  margin: 5% 0%;
 }
 .form__article h1 {
   font-weight: 700;
@@ -507,12 +613,13 @@ p {
 }
 .form__article label {
   font-size: 1.2rem;
+  margin: 2% 0% 2% 0%;
 }
 .form__article input, .form__article textarea {
   width: 20vw;
   border-radius: 0.5rem;
   margin: 5% 0%;
-  padding: 0 0 0 2%;
+  padding: 2% 0% 2% 2%;
 }
 .form__article textarea {
   background-color: rgba(245, 245, 245, 0.25);
@@ -532,6 +639,22 @@ p {
 }
 
 @media screen and (min-width: 0px) and (max-width: 429px) {
+  .form {
+    margin: 10% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mapa {
+    margin: 5% 5%;
+    padding: 3% 3%;
+  }
+  .mapa iframe {
+    width: 50vw;
+    height: 40vh;
+    border-radius: 1rem;
+  }
   .form__article h1 {
     font-size: 1.2rem;
     text-align: center;
@@ -547,7 +670,23 @@ p {
     width: 70%;
   }
 }
-@media screen and (min-width: 430px) and (max-width: 768px) {
+@media screen and (min-width: 430px) and (max-width: 920px) {
+  .form {
+    margin: 10% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mapa {
+    margin: 5% 5%;
+    padding: 3% 3%;
+  }
+  .mapa iframe {
+    width: 40vw;
+    height: 40vh;
+    border-radius: 1rem;
+  }
   .form__article h1 {
     font-size: 1.5rem;
     text-align: center;
@@ -629,12 +768,27 @@ p {
   object-fit: cover;
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   #carouselExampleCaptions {
     height: 300px;
   }
   .carousel-inner img {
     height: 300px;
+  }
+  .carousel-caption {
+    background-color: rgba(34, 38, 42, 0.7);
+    margin: 1% 1%;
+    border-radius: 1rem;
+    margin-bottom: 5%;
+  }
+  .carousel-caption h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .carousel-caption p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 2%;
   }
 }
 

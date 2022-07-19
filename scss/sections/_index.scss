@@ -23,15 +23,50 @@
     }
     &__text {
         @include flexCenter;
+        background-image: map-get($wallpaper, newsletter);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70% 90%;  
         flex-direction: column;
         flex-wrap: wrap;
         width:50vw;
+        height: 100vh;
         text-align: center;
         font-size: 1.5rem;
 
         & h1{
-            font-size: 3.5rem;
+            color: $clr-ligthgreen;
+            font-size: 2rem;
             margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        & h2{
+            color:$clr-ligthgreen;
+            font-size: 1.5rem;
+            width: 55%;
+        }
+
+        & label {
+            color:$clr-ligthgreen;
+            font-size: 1.2rem;
+            margin: 2% 0% 2% 0%;
+            width: 50%;
+        }
+        
+        & form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & input {
+                font-size: 1rem;
+                width: 20vw;
+                height: auto;
+                border-radius: 0.5rem;
+                margin: 2% 0%;
+                padding: 5px;
+        } 
         }
     }
 }
@@ -45,22 +80,69 @@
     align-items: center;
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px){
+@media screen and (min-width: 0px) and (max-width: 768px){
     .banner{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        height: auto;
+        padding: 2% 0%;
+
+        &__img{
+            width: 100%;
+        }
 
         & img{
             width: 60vw;
             border-radius: 1rem;
+            margin-left: 20%;
         } 
-        &__text h1{
-            font-size: 1.2rem;
+        &__text {
+            background-image: none;
+            background-color: $clr-newsletter;
+            color:$clr-whitesmoke;
+            width:60vw;
+            height: auto;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 5% 5%;
+            border-radius: 1rem;
+    
+            & h1{
+                font-size: 1.4rem;
+                color:$clr-whitesmoke;
+                padding: 2% 0%;
+            }
+    
+            & h2{
+                font-size: 1.2rem;
+                color:$clr-whitesmoke;
+                padding: 2% 0%;
+                width: 50vw;
+            }
+    
+            & label {
+                font-size: 1rem;
+                color:$clr-whitesmoke;
+                padding: 2% 0%;
+                width: 50vw;
+            }
+            
+            & form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                & input {
+                    font-size: 1rem;
+                    width: 50vw;
+                    height: auto;
+                    border-radius: 0.5rem;
+                    margin: 2% 0%;
+                    padding: 5px;
+                }
+            }
         }
-        &__text p {
-            font-size: 1rem;
-        }
-        }
-    }
+    } 
+}

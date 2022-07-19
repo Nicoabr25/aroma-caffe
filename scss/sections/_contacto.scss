@@ -7,12 +7,28 @@
 
 .form{
     margin: 10% 10%;
+    @include flexCenter;
+    flex-direction: row;
+    background-color: rgba(238,238,238,0.85);
+    border-radius: $borderRadius1;
+}
+
+.mapa{
+    margin: 5% 5%;
+    padding: 3% 3%;
+
+    & iframe {
+        width: 35vw;
+        height: 70vh;
+        border-radius: 1rem;
+    }
 }
 
 .form__article{
     @include flexColumBetewen;
     background-color: $clr-article;
     border-radius: $borderRadius1;
+    margin: 5% 0%;
 
     & h1{
         @include title;
@@ -29,13 +45,14 @@
 
     & label{
         font-size: 1.2rem;
+        margin: 2% 0% 2% 0%;
     }
 
     & input{
         width: 20vw;
         border-radius: 0.5rem;
         margin: 5% 0%;
-        padding: 0 0 0 2%;
+        padding: 2% 0% 2% 2%;
     }
 
     & textarea {
@@ -53,13 +70,33 @@
 .button { 
     background-color: $clr-yellow;
 
+
     &:hover{
         background-color: $clr-ligthgreen;
         color: white;
     }
 }
 
+
+
 @media screen and (min-width: 0px) and (max-width: 429px){
+    .form{
+        margin: 10% 10%;
+        @include flexCenter;
+        flex-direction: column;
+    }
+    
+    .mapa{
+        margin: 5% 5%;
+        padding: 3% 3%;
+    
+        & iframe {
+            width: 50vw;
+            height: 40vh;
+            border-radius: 1rem;
+        }
+    }
+
     .form__article{
         & h1{
         font-size: 1.2rem;
@@ -78,7 +115,27 @@
     }
 }
 
-@media screen and (min-width: 430px) and (max-width: 768px){
+@media screen and (min-width: 430px) and (max-width: 920px){
+    .form{
+        margin: 10% 10%;
+        @include flexCenter;
+        flex-direction: column;
+    }
+    
+    .mapa{
+        margin: 5% 5%;
+        padding: 3% 3%;
+    
+        & iframe {
+            width: 40vw;
+            height: 40vh;
+            border-radius: 1rem;
+        }
+    }
+
+
+
+
     .form__article{
         & h1{
         font-size: 1.5rem;

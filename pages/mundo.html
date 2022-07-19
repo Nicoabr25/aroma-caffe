@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aprende sobre los diferentes estilos de grano y su procedencia para que puedas elegir y refinar tu gusto.">
+    <meta name="description"
+        content="Aprende sobre los diferentes estilos de grano y su procedencia para que puedas elegir y refinar tu gusto.">
     <meta name="keywords" content="cafe, coffee, Arabica, Robusta, Liberica, Excelsa, barista">
     <meta name="owner" content="Nicolás Abraham">
     <link rel="shortcut icon" href="../img/favicon.png">
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Café del Mundo</title>
 </head>
+
 <body>
     <!----------------------------------------------------- Header ----------------------------------------------------->
     <header id="header">
@@ -28,7 +31,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="../index.html">Home</a>
-                        <a class="nav-link active" aria-current="page" href="./mundo.html" style=color:darkcyan>Café del Mundo</a>
+                        <a class="nav-link active" aria-current="page" href="./mundo.html" style=color:darkcyan>Café del
+                            Mundo</a>
                         <a class="nav-link" href="./productos.html">Productos</a>
                         <a class="nav-link" href="./nosotros.html">Nosotros</a>
                         <a class="nav-link" href="./contacto.html">Contacto</a>
@@ -46,61 +50,132 @@
                         <h1 class="col-12 text-center p-4">Cafés del Mundo</h1>
                     </div>
                 </div>
-                        <div class="table-responsive p-4">
-                        <table class="table table-dark table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Variedad</th>
-                                        <th scope="col">Sabort</th>
-                                        <th scope="col">Lugar</th>
-                                        <th scope="col">Características</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Arábica</th>
-                                        <td>Es más ácido y su sabor es suave y agradable.</td>
-                                        <td>Colombia, Honduras, Nicaragua, Perú, Brasil, Africa Central</td>
-                                        <td>El café de esta variedad es conocido por tener un sabor suave pero aromático, con notas dulces y florales.</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Robusta</th>
-                                        <td>Tiene un sabor más fuerte y amargo.</td>
-                                        <td>África Occidental y Malasia</td>
-                                        <td>El café de esta variedad es conocido por tener un sabor más amargo, es más intenso, fuerte, menos aromático y con mucho cuerpo.</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Libérica</th>
-                                        <td>Tiene un sabor muy fuerte y toques amaderados, incluso notas a chocolate.</td>
-                                        <td>África Occidental y Malasia</td>
-                                        <td>Su sabor no es muy apetecido por sus notas ahumadas, sabor amargo y por tener mucho cuerpo y fuerza.</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Excelsa</th>
-                                        <td>Notas ahumadas y un cuerpo ácido y afrutado.</td>
-                                        <td>Indonesia y Filipinas.</td>
-                                        <td>Tiene un sabor muy fuerte, amargo y es de mucho cuerpo, por eso no es muy demandado.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                <div class="mapaCafe d-flex justify-content-center m-4 p-4">
+                <div class="table-responsive p-4 d-none d-md-block">
+                    <table class="table table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Variedad</th>
+                                <th scope="col">Sabor</th>
+                                <th scope="col">Lugar</th>
+                                <th scope="col">Características</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Arábica</th>
+                                <td>Es más ácido y su sabor es suave y agradable.</td>
+                                <td>Colombia, Honduras, Nicaragua, Perú, Brasil, Africa Central</td>
+                                <td>El café de esta variedad es conocido por tener un sabor suave pero aromático, con
+                                    notas dulces y florales.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Robusta</th>
+                                <td>Tiene un sabor más fuerte y amargo.</td>
+                                <td>África Occidental y Malasia</td>
+                                <td>El café de esta variedad es conocido por tener un sabor más amargo, es más intenso,
+                                    fuerte, menos aromático y con mucho cuerpo.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Libérica</th>
+                                <td>Tiene un sabor muy fuerte y toques amaderados, incluso notas a chocolate.</td>
+                                <td>África Occidental y Malasia</td>
+                                <td>Su sabor no es muy apetecido por sus notas ahumadas, sabor amargo y por tener mucho
+                                    cuerpo y fuerza.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Excelsa</th>
+                                <td>Notas ahumadas y un cuerpo ácido y afrutado.</td>
+                                <td>Indonesia y Filipinas.</td>
+                                <td>Tiene un sabor muy fuerte, amargo y es de mucho cuerpo, por eso no es muy demandado.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mapaCafe d-flex justify-content-center m-4 p-4 d-none d-md-block">
                     <img src="../img/mapadelcafe.jpg" alt="Mapa del Café">
+                </div>
+                <div class="acordeon">
+                    <div class="accordion d-md-none" id="accordionExample">
+                        <div class="accordion-item bg-secondary">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button text-bg-dark" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Variedad : Arábica
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Es más ácido y su sabor es suave y agradable.</strong> Se produce principalmente en las zonas de Colombia, Honduras, Nicaragua, Perú, Brasil y Africa Central.
+                                    El café de esta variedad es conocido por tener un sabor suave pero aromático, con notas dulces y florales.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-secondary">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed text-bg-dark" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Variedad : Robusta
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Tiene un sabor más fuerte y amargo.</strong> Se produce principalmente en las zonas de África Occidental y Malasia.
+                                    El café de esta variedad es conocido por tener un sabor más amargo, es más intenso, fuerte, menos aromático y con mucho cuerpo.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-secondary">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed text-bg-dark" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Variedad : Libérica
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Tiene un sabor muy fuerte y toques amaderados, incluso notas a chocolate.</strong>  Se produce principalmente en las zonas de África Occidental y Malasia,
+                                    Su sabor no es muy apetecido por sus notas ahumadas, sabor amargo y por tener mucho cuerpo y fuerza.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-secondary">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed text-bg-dark" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Variedad : Excelsa
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Esta variedad tienen notas ahumadas y un cuerpo ácido y afrutado.</strong> Se produce principalmente en las zonas de Indonesia y Filipinas.
+                                    Tiene un sabor muy fuerte, amargo y es de mucho cuerpo, por eso no es muy demandado.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
-    <!----------------------------------------------------- Footer ----------------------------------------------------->
-    <footer id="footer">
-        <div class="footer sticky-bottom">
-            <img class="footer__imagen px-3" src="../img/logofooter4.png" alt="logo del footer">
-            <ul class="px-3">
-                <li><a href="./contacto.html" alt="contacto"><i class="bi-telephone"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="bi-twitter" alt="Twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank"><i class="bi-instagram" alt="Instagram""></i></a></li>
+        <!----------------------------------------------------- Footer ----------------------------------------------------->
+        <footer id="footer">
+            <div class="footer sticky-bottom">
+                <img class="footer__imagen px-3" src="../img/logofooter4.png" alt="logo del footer">
+                <ul class="px-3">
+                    <li><a href="./contacto.html" alt="contacto"><i class="bi-telephone"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="bi-twitter" alt="Twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="bi-instagram" alt="Instagram""></i></a></li>
             </ul>
         </div>
     </footer>
 <!---------------------------------------------- Bootstrap JS Script ---------------------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                                crossorigin="anonymous"></script>
 </body>
+
 </html>

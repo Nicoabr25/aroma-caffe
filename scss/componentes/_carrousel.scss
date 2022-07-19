@@ -2,21 +2,37 @@
 #carrousel{
     max-height: 700px;
 }
+
 .carousel-inner p{
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 1.5;
 }
-
 .carousel-item img{
     object-fit: cover;
 }
-@media screen and (min-width: 0px) and (max-width: 600px){
-    
+@media screen and (min-width: 0px) and (max-width: 768px){    
     #carouselExampleCaptions{
         height: 300px;
     }
     .carousel-inner img{
         height: 300px;
+    }
+
+    .carousel-caption {
+        background-color: rgba(34, 38, 42, 0.7);
+        margin: 1% 1%;
+        border-radius: $borderRadius1;
+        margin-bottom: 5%;
+
+        & h2 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        & p {
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 2%;
+        }
     }
 }
