@@ -62,7 +62,6 @@
     }
 }
 
-
 .dato {
     background-color: rgba(245, 245, 245, 0.25)
 }
@@ -133,9 +132,6 @@
         }
     }
 
-
-
-
     .form__article{
         & h1{
         font-size: 1.5rem;
@@ -149,7 +145,7 @@
         width: 70%;
         }
         & textarea{
-        width:70%
+        width:70%;
         }
     }
 }
