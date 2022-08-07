@@ -61,7 +61,7 @@ table {
   border-spacing: 0;
 }
 
-input, .form__article textarea,
+input, .form__article form textarea,
 select {
   vertical-align: middle;
 }
@@ -259,13 +259,16 @@ p {
   flex-direction: column;
   align-items: center;
 }
-.banner__text form input, .banner__text form .form__article textarea, .form__article .banner__text form textarea {
+.banner__text form input, .banner__text .form__article form textarea, .form__article .banner__text form textarea {
   font-size: 1rem;
   width: 20vw;
   height: auto;
   border-radius: 0.5rem;
   margin: 2% 0%;
   padding: 5px;
+}
+.banner__text form .button {
+  padding: 12px 5px;
 }
 
 #main section {
@@ -327,7 +330,7 @@ p {
     flex-direction: column;
     align-items: center;
   }
-  .banner__text form input, .banner__text form .form__article textarea, .form__article .banner__text form textarea {
+  .banner__text form input, .banner__text .form__article form textarea, .form__article .banner__text form textarea {
     font-size: 1rem;
     width: 50vw;
     height: auto;
@@ -347,6 +350,10 @@ p {
 }
 
 .mundo__article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
   margin: 10% 10%;
@@ -364,6 +371,7 @@ p {
 .table {
   overflow-x: auto;
   padding: 5%;
+  max-width: 1370px;
 }
 
 .acordeon {
@@ -499,17 +507,21 @@ p {
   margin: 10px 0px;
   padding: 10px;
 }
-.producto__article div {
-  height: auto;
-  margin: 2%;
-}
-.producto__article img {
-  width: 100%;
+.producto__article .bebidas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
   border-radius: 1rem;
+}
+.producto__article .bebidas img {
+  border-radius: 0.75rem;
+  width: 500px;
+  margin: 4% 2%;
   transition: all 2s;
 }
-.producto__article img:hover {
-  transform: scale(1.2, 1.2);
+.producto__article .bebidas img:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .producto__p {
@@ -519,16 +531,6 @@ p {
   text-align: justify;
   margin: 2% 5%;
   line-height: 2;
-}
-
-.card {
-  width: 18rem;
-}
-
-.card-text {
-  font-size: 0.8rem;
-  margin-bottom: 5%;
-  text-align: justify;
 }
 
 @media screen and (min-width: 0px) and (max-width: 429px) {
@@ -541,15 +543,11 @@ p {
   .producto__article h2 {
     font-size: 1rem;
   }
-  .card {
-    width: 12rem;
-    margin: 4px;
-  }
-  .container {
-    overflow-x: scroll;
+  .producto__article .bebidas img {
+    width: 250px;
   }
 }
-@media screen and (min-width: 430px) and (max-width: 768px) {
+@media screen and (min-width: 429px) and (max-width: 768px) {
   .producto {
     padding: 1% 0vw;
   }
@@ -558,6 +556,9 @@ p {
   }
   .producto__article h2 {
     font-size: 1rem;
+  }
+  .producto__article .bebidas img {
+    width: 320px;
   }
 }
 /*-------Contacto------*/
@@ -571,7 +572,7 @@ p {
 }
 
 .form {
-  margin: 10% 10%;
+  margin: 5% 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,49 +582,65 @@ p {
 }
 
 .mapa {
-  margin: 5% 5%;
-  padding: 3% 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 2% 2%;
+  padding: 0% 0%;
+  overflow-y: hidden;
 }
 .mapa iframe {
-  width: 35vw;
-  height: 70vh;
+  aspect-ratio: 0.5;
+  height: 120vh;
+  max-height: 2000px;
+  width: 100%;
   border-radius: 1rem;
 }
 
 .form__article {
+  height: 120vh;
+  max-height: 2000px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(238, 238, 238, 0.75);
   border-radius: 1rem;
-  margin: 5% 0%;
+  margin: 2% 2%;
 }
 .form__article h1 {
   font-weight: 700;
   font-family: "EB Garamond", serif;
-  padding: 10px;
+  padding: 5px;
+  margin: 2% 0%;
 }
 .form__article form {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2% 0%;
+  padding: 2% 5%;
 }
-.form__article label {
+.form__article form label {
   font-size: 1.2rem;
   margin: 2% 0% 2% 0%;
+  font-weight: 500;
 }
-.form__article input, .form__article textarea {
-  width: 20vw;
+.form__article form input, .form__article form textarea {
+  width: 100%;
   border-radius: 0.5rem;
-  margin: 5% 0%;
+  margin: 2% 0%;
   padding: 2% 0% 2% 2%;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
-.form__article textarea {
+.form__article form textarea {
   background-color: rgba(245, 245, 245, 0.25);
-  padding: 2% 0 0 2%;
+  padding: 2% 0% 0% 2%;
 }
 
 .dato {
@@ -632,6 +649,8 @@ p {
 
 .button {
   background-color: #D9AC84;
+  font-weight: 500;
+  transition: 200ms ease;
 }
 .button:hover {
   background-color: #3CA6A6;
@@ -640,66 +659,100 @@ p {
 
 @media screen and (min-width: 0px) and (max-width: 429px) {
   .form {
-    margin: 10% 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 10% 0%;
     flex-direction: column;
   }
   .mapa {
-    margin: 5% 5%;
-    padding: 3% 3%;
+    width: 95vw;
+    margin: 5% 0%;
+    padding: 0% 0%;
   }
   .mapa iframe {
-    width: 50vw;
-    height: 40vh;
+    width: 100%;
+    height: 50vh;
     border-radius: 1rem;
   }
-  .form__article h1 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .form__article label {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-  .form__article input, .form__article textarea {
-    width: 70%;
-  }
-  .form__article textarea {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 430px) and (max-width: 920px) {
-  .form {
-    margin: 10% 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .mapa {
-    margin: 5% 5%;
-    padding: 3% 3%;
-  }
-  .mapa iframe {
-    width: 40vw;
-    height: 40vh;
-    border-radius: 1rem;
+  .form__article {
+    width: 95vw;
+    height: 100%;
   }
   .form__article h1 {
+    margin-top: 10%;
     font-size: 1.5rem;
     text-align: center;
   }
-  .form__article label {
+  .form__article form {
+    width: 90vw;
+  }
+  .form__article form label {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+    margin: 5% 0px;
+  }
+  .form__article form input, .form__article form textarea {
+    width: 90%;
+  }
+  .form__article form textarea {
+    width: 90%;
+  }
+  .form__article form .button {
+    width: 50vw;
+    margin: 5% 0%;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 429px) and (max-width: 960px) {
+  .form {
+    margin: 10% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form__article {
+    width: 95vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form__article h1 {
+    margin-top: 8%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .form__article form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .form__article form label {
     font-size: 1.2rem;
     text-align: center;
   }
-  .form__article input, .form__article textarea {
-    width: 70%;
+  .form__article form input, .form__article form textarea {
+    width: 80vw;
   }
-  .form__article textarea {
-    width: 70%;
+  .form__article form textarea {
+    width: 80vw;
+  }
+  .form__article form .button {
+    width: 60vw;
+    margin: 5% 0%;
+    font-weight: 500;
+    padding: 3%;
+  }
+  .mapa {
+    width: 95vw;
+    margin: 5% 0%;
+    padding: 0% 0%;
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 50vh;
+    border-radius: 1rem;
   }
 }
 /*-------Footer------*/
@@ -789,6 +842,159 @@ p {
     font-size: 0.8rem;
     text-align: center;
     padding: 2%;
+  }
+}
+.tarjetas__productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4% 4%;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  width: 300px;
+  background-color: rgba(238, 238, 238, 0.75);
+  border-radius: 1rem;
+  padding: 1% 1%;
+  margin: 10px 10px;
+}
+.tarjeta__imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: 250px;
+  border-radius: 0.75rem;
+  margin-bottom: 15px;
+}
+.tarjeta__imagen img {
+  width: 100%;
+  transition: all 1s;
+}
+.tarjeta__imagen img:hover {
+  transform: scale(1.1, 1.1);
+}
+.tarjeta__info {
+  margin-bottom: 5%;
+  text-align: justify;
+  padding: 0% 5%;
+}
+.tarjeta__info h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 25px;
+}
+.tarjeta__info p {
+  height: 65px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.tarjeta__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+.tarjeta__button button {
+  cursor: pointer;
+  border: none;
+  background-color: #212529;
+  border-radius: 0.75rem;
+  padding: 0.5rem 2rem;
+}
+.tarjeta__button button a {
+  color: #f5f5f5;
+}
+.tarjeta__button button:hover {
+  background-color: #3CA6A6;
+}
+
+@media screen and (min-width: 0px) and (max-width: 429px) {
+  .tarjeta {
+    height: 300px;
+    width: 200px;
+  }
+  .tarjeta__imagen {
+    padding: 1rem;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  .tarjeta__imagen img {
+    width: 100%;
+    transition: all 1s;
+  }
+  .tarjeta__imagen img:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .tarjeta__info {
+    margin-bottom: 2%;
+    padding: 0% 2%;
+  }
+  .tarjeta__info h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    height: 20px;
+  }
+  .tarjeta__info p {
+    height: 40px;
+    font-size: 0.8rem;
+    margin: 0.5rem 0rem;
+  }
+  .tarjeta__button {
+    margin: 0.2rem 0rem;
+  }
+  .tarjeta__button button {
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (min-width: 429px) and (max-width: 768px) {
+  .tarjeta {
+    height: 350px;
+    width: 280px;
+  }
+  .tarjeta__imagen {
+    padding: 1rem;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .tarjeta__imagen img {
+    width: 100%;
+    transition: all 1s;
+  }
+  .tarjeta__imagen img:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .tarjeta__info {
+    margin-bottom: 2%;
+    padding: 0% 2%;
+  }
+  .tarjeta__info h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+  .tarjeta__info p {
+    height: 45px;
+    font-size: 0.8rem;
+    margin: 0.5rem 0rem;
+  }
+  .tarjeta__button {
+    margin: 0.2rem 0rem;
+  }
+  .tarjeta__button button {
+    padding: 0.5rem 1rem;
   }
 }
 

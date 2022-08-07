@@ -6,10 +6,7 @@
 }
 
 .producto__article{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flexColumBetewen;
     background-color: $clr-article;
     border-radius: $borderRadius1;
     margin: 10% 10%;
@@ -31,18 +28,20 @@
         padding: 10px;
     }
 
-    & div{
-        height: auto;
-        margin: 2%;
-    }
-
-    & img{
-        width: 100%;
+    & .bebidas{
+        @include flexCenter;
+        width: 90%;
         border-radius: 1rem;
-        transition: all 2s;
 
-        &:hover{
-            transform: scale(1.2, 1.2);
+        & img{
+            border-radius: $borderRadius075;
+            width: 500px;
+            margin: 4% 2%;
+            transition: all 2s;
+            
+            &:hover{
+                transform: scale(1.1, 1.1);
+            }
         }
     }
 }
@@ -56,43 +55,38 @@
     line-height: 2;
 }
 
-.card{
-    width: 18rem;
-}
-.card-text {
-    font-size: 0.8rem;
-    margin-bottom: 5%;
-    text-align: justify;
-}
-
 @media screen and (min-width: 0px) and (max-width: 429px){
     .producto{
         padding: 1% 0vw ;
-    }
-    .producto__article h1{
-        font-size: 1.2rem;
-    }
-    .producto__article h2{
-        font-size: 1rem;
-    }
-    .card{
-        width: 12rem;
-        margin: 4px;
-    }
-    
-    .container{
-        overflow-x: scroll;
-    }
-}
 
-@media screen and (min-width: 430px) and (max-width: 768px){
+        &__article{
+            & h1{
+                font-size: 1.2rem;
+            }
+            & h2{
+                font-size: 1rem;
+            }
+            & .bebidas img{
+                width: 250px;
+            }
+        }
+    }
+}    
+
+@media screen and (min-width: 429px) and (max-width: 768px){
     .producto{
         padding: 1% 0vw ;
+
+        &__article{
+            & h1{
+                font-size: 1.5rem;
+            }
+            & h2{
+                font-size: 1rem;
+            }
+            & .bebidas img{
+                width: 320px;
+            }
+        }
     }
-    .producto__article h1{
-        font-size: 1.5rem;
-    }
-    .producto__article h2{
-        font-size: 1rem;
-    }
-}
+} 
