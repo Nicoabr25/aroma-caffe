@@ -38,3 +38,25 @@
 .accordion-item h2{
     color: aquamarine;
 }
+
+@media screen and (min-width: 0px) and (max-width: 429px){
+    .mundo__article {
+        margin: 10% 2%;
+        padding: 1% 0%;
+
+        & h1{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 768px){
+    .mundo__article {
+        margin: 10% 2%;
+        padding: 1% 0%;
+
+        & h1{
+            font-size: 1.5rem;
+        }
+    }
+}
