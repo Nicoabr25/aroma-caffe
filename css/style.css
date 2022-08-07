@@ -433,9 +433,12 @@ p {
   font-family: "EB Garamond", serif;
 }
 .nosotros__article h2 {
-  padding: 2%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
   text-align: center;
-  font-size: 1.2rem;
+  margin: 10px 0px;
+  padding: 10px;
 }
 .nosotros__article p {
   margin: 2% 2%;
